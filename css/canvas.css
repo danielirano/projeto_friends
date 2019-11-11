@@ -1,0 +1,26 @@
+body {
+  
+  margin: 10px;
+}
+
+.t{
+	background: #9402b5;
+	width:500px;
+}
+
+.i{
+	width: 500px;
+	height: 200px;
+}
+
+img {
+  display: none;
+}
+
+table {
+  margin: 0 auto;
+}
+
+td {
+  padding: 15px;
+}
