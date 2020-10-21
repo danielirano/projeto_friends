@@ -1,68 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="utf-8">
-    <title>Homenagem</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+
+<head>
+	<meta charset="utf-8">
+	<title>Homenagem</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link href="css/canvas.css" rel="stylesheet">
 	<link href="css/estilo.min.css" rel="stylesheet">
 
-	
-	 <script>
+
+	<script>
 		function moldura() {
 
-		  // Loop through all images
-		  for (var i = 0; i < document.images.length; i++) {
+			// Loop through all images
+			for (var i = 0; i < document.images.length; i++) {
 
-			// Don't add a canvas for the frame image
-			if (document.images[i].getAttribute('id') != 'frame' ) {
+				// Don't add a canvas for the frame image
+				if (document.images[i].getAttribute('id') != 'frame') {
 
-			  // Create canvas element
-			  canvas = document.createElement('canvas');
-			  canvas.setAttribute('width', 132);
-			  canvas.setAttribute('height', 150);
+					// Create canvas element
+					canvas = document.createElement('canvas');
+					canvas.setAttribute('width', 132);
+					canvas.setAttribute('height', 150);
 
-			  // Insert before the image
-			  document.images[i].parentNode.insertBefore(canvas,document.images[i]);
+					// Insert before the image
+					document.images[i].parentNode.insertBefore(canvas, document.images[i]);
 
-			  ctx = canvas.getContext('2d');
+					ctx = canvas.getContext('2d');
 
-			  // Draw image to canvas
-			  ctx.drawImage(document.images[i], 20, 20);
+					// Draw image to canvas
+					ctx.drawImage(document.images[i], 20, 20);
 
-			  // Add frame
-			  ctx.drawImage(document.getElementById('frame'), 0, 0);
+					// Add frame
+					ctx.drawImage(document.getElementById('frame'), 0, 0);
+				}
 			}
-		  }
 		}
 	</script>
-  </head>
-  <body class="surpresa" onload="moldura();">
-       
-        <main> <br><br><br>
-		 <table>
-	 
-      <tr>
-        <td><img src="img/rachel1.jpg" alt="Rachel" ></td>
-        <td><img src="img/phoebe1.jpg" alt="Phoebe"></td>
-        <td><img src="img/monica1.jpg" alt="Monica"></td>	
-        
-      </tr>
-      <tr>
-        <td><img src="img/ross1.jpg" alt="Ross"></td>
-        <td><img src="img/joey1.jpg" alt="Joey"></td>
-        <td><img src="img/chandler1.jpg" alt="Chandler"></td>
-        
-      </tr>
-     </table>
-     <img id="frame" src="img/Canvas_picture_frame.png" width="132" height="150">
-	 
-	
-	</main>	
-        
-        
-    <script src="js/jquery-3.3.1.slim.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-  </body>
+</head>
+
+<body class="surpresa" onload="moldura();">
+
+	<main class="container">
+		<table>
+
+			<tr>
+				<td><img src="img/rachel1.jpg" alt="Rachel"></td>
+				<td><img src="img/phoebe1.jpg" alt="Phoebe"></td>
+				<td><img src="img/monica1.jpg" alt="Monica"></td>
+
+			</tr>
+			<tr>
+				<td><img src="img/ross1.jpg" alt="Ross"></td>
+				<td><img src="img/joey1.jpg" alt="Joey"></td>
+				<td><img src="img/chandler1.jpg" alt="Chandler"></td>
+
+			</tr>
+		</table>
+		<img id="frame" src="img/Canvas_picture_frame.png" width="132" height="150">
+
+
+	</main>
+
+
+	<script src="js/jquery-3.3.1.slim.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+
 </html>

@@ -1,6 +1,6 @@
 body {
   
-  margin: 10px;
+  margin: 0px;
 }
 
 .t{
@@ -17,10 +17,13 @@ img {
   display: none;
 }
 
-table {
-  margin: 0 auto;
-}
-
 td {
   padding: 15px;
+}
+
+.container{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
